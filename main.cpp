@@ -256,6 +256,7 @@ Process firstFitMoveProcess(vector<Process> &processes, int index)
 
     return process;
 }
+
 // Greedily checking if this program can be loaded in MM
 void firstFit(map<int, vector<Process>> &events, int last, int arrivalTime, int &turnAroundTime, vector<Process> &processes, map<int, int> &mapAtTime)
 {
@@ -306,7 +307,6 @@ void firstFit(map<int, vector<Process>> &events, int last, int arrivalTime, int 
         }
     }
 }
-
 
 int bestFitProcessMovePossible(vector<Process> processes, int say, int &ans)
 {
