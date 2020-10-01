@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// It is the main memory size
 #define MEM_SIZE 2000
 
 vector<string> memory(MEM_SIZE);
@@ -256,6 +257,7 @@ Process firstFitMoveProcess(vector<Process> &processes, int index)
     return process;
 }
 
+// Greedily checking if this program can be loaded in MM
 void firstFit(map<int, vector<Process>> &events, int last, int arrivalTime, int &turnAroundTime, vector<Process> &processes, map<int, int> &mapAtTime)
 {
     // Here i is the time
