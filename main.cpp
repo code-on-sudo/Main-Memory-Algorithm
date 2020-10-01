@@ -634,8 +634,8 @@ void firstFitAlgorithm()
 
     while ((processes.size() > 0 || eventsOnProcess.size() > 0))
     {
-        firstFit(eventsOnProcess, lastTime, lastTime + 1000, turnAroundTime, processes, mapAtTime);
-        lastTime += 1000;
+        firstFit(eventsOnProcess, lastTime, lastTime + 1, turnAroundTime, processes, mapAtTime);
+        lastTime += 1;
     }
 
     double averageTurnAroundTime = turnAroundTime * 1.0 / processCount;
@@ -697,11 +697,11 @@ void bestFitAlgorithm()
 
         lastTime = arrivalTime;
     }
-
+    //Incrementing time by 1 
     while ((processes.size() > 0 || eventsOnProcess.size() > 0))
     {
-        bestFit(eventsOnProcess, lastTime, lastTime + 1000, turnAroundTime, processes, mapAtTime);
-        lastTime += 1000;
+        bestFit(eventsOnProcess, lastTime, lastTime + 1, turnAroundTime, processes, mapAtTime);
+        lastTime += ;
     }
 
     double averageTurnAroundTime = turnAroundTime * 1.0 / processCount;
